@@ -22,7 +22,6 @@ export const GithubRepositories = () => {
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(5);
     const [text, setText] = useState(null);
-    const [sort, setSort] = useState(false);
 
     useEffect(() => {
         getUsers(user,page,perPage)
@@ -46,10 +45,6 @@ export const GithubRepositories = () => {
         setPerPage(perPage)
     }
 
-    const handleSort = () => {
-        setSort(!sort);
-    }
-
     const totalPage = Math.ceil(data.total_count/perPage);
 
   return (
@@ -62,11 +57,10 @@ export const GithubRepositories = () => {
             <div>
                 <input type="number" placeholder=" Per Page" onChange={p => setText(p.target.value)}/>
                 <button onClick={() => handlePerPage(text)}>GO</button>
-                {sort ? (<button onClick={() =>{handleSort()}}>Sort By Descending</button>) : (<button onClick={() =>{handleSort()}}>Sort by Ascending</button>)}
             </div>
             <div>
                 <button disabled={page===1} onClick={() => handlePage(-1)}>PREV</button>
-                <button onClick={() => handlePage(+1)}>NEXT</button>
+                <button disabled={page===totalPage} onClick={() => handlePage(+1)}>NEXT</button>
                 <b>Total Pages : {totalPage}</b>
             </div>
         </div>
