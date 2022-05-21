@@ -1,0 +1,44 @@
+.app {
+    display: flex;
+    width:30rem;
+    height: 20rem;
+    border: 1px solid black;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.head{
+    display: flex;
+    height: 3rem;
+    border: 1px solid red;
+    align-items: center;
+    width: 100%;
+}
+
+.head_timer {
+    display: flex;
+    width: 50%;
+    justify-content:center;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stopwatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+.stopwatchWatch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
