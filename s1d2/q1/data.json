@@ -6,7 +6,11 @@
            "cuisine":"American",
            "cost":200,
            "minPrice":50,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+              "card": "true",
+              "cash": "false",
+              "upi" : "false"
+           },
            "rating":4.2,
            "votes":567,
            "reviews":467,
@@ -19,7 +23,11 @@
            "cuisine":"Italian",
            "cost":300,
            "minPrice":100,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":3.6,
            "votes":231,
            "reviews":345,
@@ -32,7 +40,11 @@
            "cuisine":"Japanese",
            "cost":600,
            "minPrice":150,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":2.8,
            "votes":345,
            "reviews":467,
@@ -45,7 +57,11 @@
            "cuisine":"Indian",
            "cost":100,
            "minPrice":150,
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":3.6,
            "votes":567,
            "reviews":345,
@@ -58,7 +74,11 @@
            "cuisine":"Chinese",
            "cost":600,
            "minPrice":50,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":4.2,
            "votes":745,
            "reviews":539,
@@ -71,7 +91,11 @@
            "cuisine":"Italian",
            "cost":400,
            "minPrice":200,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":2.8,
            "votes":145,
            "reviews":192,
@@ -84,7 +108,11 @@
            "cuisine":"Italian",
            "cost":200,
            "minPrice":200,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":0.9,
            "votes":745,
            "reviews":467,
@@ -97,7 +125,11 @@
            "cuisine":"Indian",
            "cost":300,
            "minPrice":100,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":3.1,
            "votes":231,
            "reviews":539,
@@ -110,7 +142,11 @@
            "cuisine":"Italian",
            "cost":100,
            "minPrice":150,
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":3.6,
            "votes":745,
            "reviews":547,
@@ -123,7 +159,11 @@
            "cuisine":"Indian",
            "cost":100,
            "minPrice":200,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "true"
+            },
            "rating":3.6,
            "votes":567,
            "reviews":467,
@@ -136,7 +176,11 @@
            "cuisine":"Italian",
            "cost":600,
            "minPrice":150,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":4.2,
            "votes":145,
            "reviews":467,
@@ -149,7 +193,11 @@
            "cuisine":"Chinese",
            "cost":600,
            "minPrice":100,
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":3.1,
            "votes":345,
            "reviews":467,
@@ -162,7 +210,11 @@
            "cuisine":"American",
            "cost":100,
            "minPrice":200,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "true"
+            },
            "rating":4.2,
            "votes":745,
            "reviews":467,
@@ -175,7 +227,11 @@
            "cuisine":"American",
            "cost":100,
            "minPrice":50,
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":3.1,
            "votes":745,
            "reviews":192,
@@ -188,7 +244,11 @@
            "cuisine":"American",
            "cost":100,
            "minPrice":150,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":2.8,
            "votes":567,
            "reviews":547,
@@ -201,7 +261,11 @@
            "cuisine":"American",
            "cost":400,
            "minPrice":150,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":3.6,
            "votes":567,
            "reviews":539,
@@ -214,7 +278,11 @@
            "cuisine":"Indian",
            "cost":"300",
            "minPrice":"150",
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":"4.2",
            "votes":"234",
            "reviews":"654",
@@ -227,7 +295,11 @@
            "cuisine":"poha",
            "cost":"30",
            "minPrice":"25",
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "false"
+            },
            "rating":"4",
            "votes":"435",
            "reviews":"234",
@@ -240,7 +312,11 @@
            "cuisine":"vadapav",
            "cost":"30",
            "minPrice":"20",
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "false",
+               "upi" : "true"
+            },
            "rating":"4",
            "votes":"435",
            "reviews":"234",
@@ -253,7 +329,11 @@
            "cuisine":"vadapav",
            "cost":"120",
            "minPrice":"100",
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":"3.9",
            "votes":"635",
            "reviews":"434",
@@ -266,7 +346,11 @@
            "cuisine":"Indian",
            "cost":400,
            "minPrice":50,
-           "paymentMethods":"Accepts card payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "false",
+               "upi" : "true"
+            },
            "rating":3.1,
            "votes":567,
            "reviews":192,
@@ -279,7 +363,11 @@
            "cuisine":"Italian",
            "cost":200,
            "minPrice":200,
-           "paymentMethods":"Accepts card and COD payments",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":2.8,
            "votes":231,
            "reviews":467,
@@ -292,7 +380,11 @@
            "cuisine":"Chinese",
            "cost":200,
            "minPrice":100,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "false",
+               "cash": "true",
+               "upi" : "false"
+            },
            "rating":2.8,
            "votes":231,
            "reviews":192,
@@ -305,7 +397,11 @@
            "cuisine":"Italian",
            "cost":100,
            "minPrice":200,
-           "paymentMethods":"Accepts COD payments only",
+           "paymentMethods":{
+               "card": "true",
+               "cash": "true",
+               "upi" : "true"
+            },
            "rating":3.6,
            "votes":567,
            "reviews":345,

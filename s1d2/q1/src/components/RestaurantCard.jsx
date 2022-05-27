@@ -10,7 +10,7 @@ export const RestaurantCard = ({
     rating,
     votes,
     reviews,
-    image
+    image,
 }) => {
   return (
     <div className={styles.detailsM}>
@@ -23,7 +23,7 @@ export const RestaurantCard = ({
                 <div><b>{cuisine}</b></div>
                 <div><b>Cost ₹{cost} for one</b></div>
                 <div><p>Min ₹{minPrice}</p></div>
-                <div><p>{paymentMethods}</p></div>
+                <div><p>Accepts {JSON.stringify(paymentMethods)} </p></div>
             </div>
             <div>
                 <div><button>{rating}</button></div>

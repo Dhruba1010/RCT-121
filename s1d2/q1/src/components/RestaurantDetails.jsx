@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { RestaurantCard } from './RestaurantCard';
 import axios from 'axios';
+import styles from './Restaurant.module.css';
 
 export const RestaurantDetails = () => {
   const [loading, setLoading] = useState(true);
@@ -10,10 +11,17 @@ export const RestaurantDetails = () => {
   const [sortShow, setSortShow] = useState(true);
   const [costSort, setCostSort] = useState("asc");
   const [ratingFilter, setRatingFilter] = useState(0);
+  const [card, setCard] = useState(null);
+  const [cash, setCash] = useState(null);
+  const [upi, setUpi] = useState(null);
   
 
-  const getData = async ({page, costSort, ratingFilter}) => {
+  const getData = async ({page, costSort, ratingFilter,card,cash,upi}) => {
     setLoading(true);
+    const paramsForPayment ={};
+    if(card !== null) paramsForPayment["paymentMethods.card"]=card;
+    if(cash !== null) paramsForPayment["paymentMethods.cash"]=cash;
+    if(upi !== null) paramsForPayment["paymentMethods.upi"]=upi;
     axios({
       method: 'GET',
       url: "http://localhost:8080/retaurants",
@@ -22,7 +30,8 @@ export const RestaurantDetails = () => {
         _limit: 5,
         _sort: "cost",
         _order: costSort,
-        rating_gte: ratingFilter
+        rating_gte: ratingFilter,
+        ...paramsForPayment
       }
     })
     .then(res => {
@@ -47,19 +56,13 @@ export const RestaurantDetails = () => {
   }
 
   useEffect(() => {
-    getData({page, costSort, ratingFilter});
-  },[page, costSort, ratingFilter]);
+    getData({page, costSort, ratingFilter,card,cash,upi});
+  },[page, costSort, ratingFilter,card,cash,upi]);
 
   return (
     <div>
       <h1>Restaurant Details</h1>
       {loading && <div>...loading</div>}
-      
-      <div>
-        {data.map(d => 
-          <RestaurantCard key={d.id} {...d}/>
-        )}
-      </div>
       <div>
         <button disabled={page===1} onClick={() => setPage(pre => pre-1)}>PREV</button>
         <button onClick={() => setPage(pre => pre+1)}>NEXT</button>
@@ -72,6 +75,22 @@ export const RestaurantDetails = () => {
         <button onClick={() => setRatingFilter(3)}>3</button>
         <button onClick={() => setRatingFilter(2)}>2</button>
         <button onClick={() => setRatingFilter(1)}>1</button>
+      </div>
+      <div>
+        <h4>Payment Methods</h4>
+        <button className={card ? styles.paymentButton : null} onClick={() => setCard(!card)}>Card</button>
+        <button className={cash ? styles.paymentButton : null} onClick={() => setCash(!cash)}>Cash</button>
+        <button className={upi ? styles.paymentButton : null} onClick={() => setUpi(!upi)}>UPI</button>
+        <button className={styles.paymentButtonAll} onClick={() =>{
+          setCard(null);
+          setCash(null);
+          setUpi(null);
+        }}>All</button>
+      </div>
+      <div>
+        {data?.map(d => 
+          <RestaurantCard key={d.id} {...d}/>
+        )}
       </div>
     </div>
   )

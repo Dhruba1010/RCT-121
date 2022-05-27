@@ -11,3 +11,13 @@
 .details{
     display:flex;
 }
+
+.paymentButton {
+    background-color: blue;
+    color: wheat;
+}
+
+.paymentButtonAll:active {
+    background-color: blue;
+    color: wheat;
+}
