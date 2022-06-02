@@ -1,0 +1,28 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.navbarM {
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.logo {
+    background-color: tomato;
+}
+
+.info {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}

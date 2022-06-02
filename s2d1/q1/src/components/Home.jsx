@@ -1,24 +1,12 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { Outlet, Link } from "react-router-dom";
-
+import styles from './ChakraUI.module.css';
 const Home = () => {
   return (
-    <>
-      <Box>Built Three Assignment As per Given Title of Ass:- CHAKRA UI 🤓</Box>
-      <Box>Click On the Below Links To Check 👇</Box>
-      <Link to="/">Home</Link>
-      <nav>
-        <Link to="/One">👉 One.Jpeg</Link>
-      </nav>
-      <nav>
-        <Link to="/Two">👉 Two.Jpeg</Link>
-      </nav>
-      <nav>
-        <Link to="/Three">👉 Three.Jpeg</Link>
-      </nav>
-      <Outlet />
+    <div className={styles.home}>
       <Heading>Welcome To Home Page </Heading>
-    </>
+      <Box>Chakra UI assignments with basic routing</Box>
+      <Box>Click on the above links to go and see the assignments</Box>
+    </div>
   );
 };
 

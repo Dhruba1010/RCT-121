@@ -3,7 +3,7 @@ import { calculateWinner } from './CalculateWinner';
 import { Grid } from './Grid';
 
 export const Game = () => {
-    const [data, setData] = useState(["", "", "", "", "", "", "", "", ""]);
+    const [data, setData] = useState([Array(9).fill(null)]);
     const [step, setStep] = useState(0);
     const [isX, setIsX] = useState(true);
     const winner = calculateWinner(data[step]);
@@ -27,7 +27,7 @@ export const Game = () => {
     <div>
         <h1>Tic Tac Toe</h1>
         <Grid  squares={data[step]} onClick={handleClick}/>
-        <h3>{winner ? "Winner" + winner : "Next Player" + xO}</h3>
+        <div><h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3></div>
     </div>
   )
 }

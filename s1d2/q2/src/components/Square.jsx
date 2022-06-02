@@ -1,13 +1,13 @@
 import React from 'react';
+import './Tic-Tac-Toe.css';
 
 export const Square = ({ title, onClick }) => {
 
+  const style = title ? `squares ${title}` : `squares`;
   return (
-    <div>
-        <button onClick = {onClick}>
+        <button className={style} onClick = {onClick}>
             {title}
         </button>
-    </div>
   )
 }
 

@@ -1,0 +1,24 @@
+.body {
+    width: 95%;
+    margin:auto;
+}
+
+.navbarM {
+    background-color: tomato;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.navbar {
+    display: flex;
+    height: 3rem;
+    width: 40rem;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.home {
+    margin: auto;
+    width: fit-content;
+}
