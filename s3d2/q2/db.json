@@ -1,12 +1,40 @@
 {
-    "todos" : [
-        {
-            "id": 1,
-            "title": "Learning Redux"
-        },
-        {
-            "id": 2,
-            "title" : "Learning Combine Reducer"
-        }
-    ]
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learning Redux"
+    },
+    {
+      "id": 2,
+      "title": "Learning Combine Reducer"
+    },
+    {
+      "title": "learn todos",
+      "id": 3
+    },
+    {
+      "title": "learn todos",
+      "id": 4
+    },
+    {
+      "title": "learn react-redux",
+      "id": 5
+    },
+    {
+      "title": "learn promises",
+      "id": 6
+    },
+    {
+      "title": "why not showing instantly",
+      "id": 7
+    },
+    {
+      "title": "now working",
+      "id": 8
+    },
+    {
+      "title": "working fine",
+      "id": 9
+    }
+  ]
 }
