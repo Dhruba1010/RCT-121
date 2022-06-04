@@ -7,31 +7,35 @@ function AuthContextProvider({ children }) {
   const [isAuth, setIsAuth] = useState(false);
   const [data, setData]  = useState([]);
 
-  const toggleAuth = () => {
-    setIsAuth(true);
-    if(isAuth === false) {
-      axios("https://reqres.in/api/login", {
-        method: "GET",
-      })
-      .then(res => {
-        setData(res.data.data);
-        setIsAuth(!isAuth);
-        console.log(data);
-      })
-      .catch(err => {
-        console.log(err);
-      })
-    }else {
-      setIsAuth(!isAuth);
-    }
+  const getData = () => {
+    axios("https://reqres.in/api/login", {
+      method: "POST",
+      data: {
+        "email": "eve.holt@reqres.in",
+        "password": "cityslicka"
+      }
+    })
+    .then(res => {
+      setData(res.data);
+      console.log(res.data);
+    })
+    .catch(err => {
+      console.log(err);
+    })
   }
 
   useEffect(()=> {
-    toggleAuth();
+    if(isAuth){
+      getData();
+    }
   },[]);
 
+  const toggleAuth = () => {
+    setIsAuth(!isAuth);
+  }
+
   return (
-    <AuthContext.Provider value={{isAuth, data, toggleAuth}}>
+    <AuthContext.Provider value={{isAuth, toggleAuth, data, getData}}>
       {children}
     </AuthContext.Provider>
   )

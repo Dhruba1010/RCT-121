@@ -5,4 +5,4 @@ const initState = {
     count: 0
 }
 
-export const store = legacy_createStore(reducer, initState);
+export const store = legacy_createStore(reducer, initState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
