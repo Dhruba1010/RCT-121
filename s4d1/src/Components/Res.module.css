@@ -1,0 +1,50 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 35rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.main:hover {
+    cursor: pointer;
+}
+
+.mainC {
+    display: flex;
+    line-height: 18px;
+    justify-content: space-between;
+    margin: 2rem;
+    text-align: left;
+}
+
+.mainC h2 {
+    margin-top: 0;
+}
+
+.mainC button{
+    display: flex;
+    background-color: #7cbd15;
+    border: 0;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.mainO {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2rem;
+    margin-top: -1rem;
+    border-top: 1px solid rgb(197, 224, 224);
+    border-bottom: 1px solid rgb(197, 224, 224);
+}
+
+.mainOo {
+    padding: 0.75rem 1.5rem;
+    background-color: #e9f4ee;
+    color : #7cbd15;
+}
+
